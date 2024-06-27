@@ -5,7 +5,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Dialog, DialogTrigger } from '@radix-ui/react-dialog';
 import { Button } from "@/components/ui/button";
 import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip";
-import { PlayIcon, FilePlusIcon, MoveIcon, ChevronDownIcon, ChevronUpIcon, TrashIcon, GearIcon } from "@radix-ui/react-icons";
+import { PlayIcon, FilePlusIcon, ChevronDownIcon, ChevronUpIcon, TrashIcon, GearIcon } from "@radix-ui/react-icons";
 import { WorkflowPage } from "./workflow-page";
 import { ClearDialog } from "./clear-dialog";
 import { SettingsModal } from "./settings-modal";
@@ -121,21 +121,12 @@ const ControlPanel = () => {
                   </Button>
                 </SheetTrigger>
               </TooltipButton>
-          <SheetContent side={"left"} className="overflow-y-scroll">
+          <SheetContent side={"left"} className="overflow-auto">
             <WorkflowPage />
           </SheetContent>
         </Sheet>
-        <TooltipButton content="Recalculate node positions">
-          <Button
-            onClick={() => {}}
-            className="relative rounded-3xl shadow-lg hover:bg-background hover:rounded-lg transition-all duration-200 h-12 w-12"
-            variant="outline"
-          >
-            <MoveIcon />
-          </Button>
-        </TooltipButton>
 
-        <TooltipButton content="Toggle parameter dropdowns">
+        <TooltipButton content="Show/hide controls">
           <Button
             onClick={() => handleExpand()}
             className="relative rounded-3xl shadow-lg hover:bg-background hover:rounded-lg transition-all duration-200 h-12 w-12"

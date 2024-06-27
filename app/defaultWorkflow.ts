@@ -96,7 +96,8 @@ const defaultWorkflow: PersistedGraph = {
           "value": {
               "widget": "CLIPTextEncode",
               "fields": {
-                  "text": "beautiful nature scenery glass bottle landscape, purple galaxy bottle"
+
+                  "text": "beautiful nature scenery glass bottle landscape, , purple galaxy bottle,"
               },
               "modify": {
                   "nickname": "Positive"
